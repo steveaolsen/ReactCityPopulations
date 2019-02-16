@@ -15,10 +15,10 @@ class App extends Component {
     
 
     popChanger = (event) => {
-        let userPop = event.target.value;//save the event as userPop
+        let userPop = event.target.value;
 
         if (/^\d*$/.test(userPop)) {
-            this.setState( {userInput: userPop } );//tests userPop and sets state
+            this.setState( {userInput: userPop } );
         }       
     }
               
@@ -36,7 +36,6 @@ class App extends Component {
         let notBigger = (
             <div>
                 <p>Zero of the Cities on the List</p>
-                <h1>Boom Roasted</h1>
             </div>
         );
         for (let j=0; j<cities.length; j++) {
@@ -49,6 +48,7 @@ class App extends Component {
 
             if (this.state.userInput < cities[cities.length - 1].Population) {
             this.setState( {biggerThan: notBigger } );
+            ranker++;
             }
             else {
             this.setState( {biggerThan: cities[ranker -1].CityName } );
