@@ -33,11 +33,7 @@ class App extends Component {
 
     rankIt = () => {
         let ranker = 1;
-        let notBigger = (
-            <div>
-                <p>Zero of the Cities on the List</p>
-            </div>
-        );
+        let notBigger = (<p>Zero of the Cities on the List</p>);
         for (let j=0; j<cities.length; j++) {
             
             if (this.state.userInput < cities[j].Population) {
@@ -48,7 +44,6 @@ class App extends Component {
 
             if (this.state.userInput < cities[cities.length - 1].Population) {
             this.setState( {biggerThan: notBigger } );
-            ranker++;
             }
             else {
             this.setState( {biggerThan: cities[ranker -1].CityName } );
