@@ -52,7 +52,7 @@ class App extends Component {
             this.setState( {biggerThan: notBigger } );
             }
             else {
-            this.setState( {biggerThan: "Bigger Than " + cities[ranker -1].CityName } );
+            this.setState( {biggerThan: "Bigger Than " + cities[ranker -1].CityName + " By a Population of " + (this.state.userInput - cities[ranker -1].Population) } );
             }
         }
     }
