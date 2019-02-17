@@ -33,8 +33,12 @@ class App extends Component {
 
     rankIt = () => {
         let ranker = 1;
-        let notBigger = "Not in the Top 87 Cities. You Would Need a Population of XXX More to Make the List.";
-        let isBigger = "Bigger than CITYNAME";
+        let notBigger = (
+            <div>
+                <p>Not in the Top 87 Cities.</p> 
+                <p>You Would Need a Population of {3002645 - this.state.userInput} More to Make the List.</p>
+            </div>);
+        let isBigger = "Bigger than CITYNAME By XXX";
         let isEqual = "Your City is Either CITYNAME or Has an Equal Population to It."
         for (let j=0; j<cities.length; j++) {
             
