@@ -38,8 +38,7 @@ class App extends Component {
                 <p>Not in the Top 87 Cities.</p> 
                 <p>You Would Need a Population of {3002645 - this.state.userInput} More to Make the List.</p>
             </div>);
-        let isBigger = "Bigger than CITYNAME By XXX";
-        let isEqual = "Your City is Either CITYNAME or Has an Equal Population to It."
+    
         for (let j=0; j<cities.length; j++) {
             
             if (this.state.userInput < cities[j].Population) {
@@ -50,8 +49,9 @@ class App extends Component {
 
             if (this.state.userInput < cities[cities.length - 1].Population) {
             this.setState( {biggerThan: notBigger } );
-            }
-            else {
+            } else if (this.state.userInput === cities[cities.length - 1].Population) {
+                this.setState( {biggerThan: "Your City is Either " + cities[ranker -1].CityName + " or Has an Equal Population to It." } );
+            } else {
             this.setState( {biggerThan: "Bigger Than " + cities[ranker -1].CityName + " By a Population of " + (this.state.userInput - cities[ranker -1].Population) } );
             }
         }
