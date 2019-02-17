@@ -35,8 +35,8 @@ class App extends Component {
         let ranker = 1;
         let notBigger = (
             <div>
-                <p>Not in the Top 87 Cities.</p> 
-                <p>You Would Need a Population of {3002645 - this.state.userInput} More to Make the List.</p>
+                <p>Not in the top 87 Cities.</p> 
+                <p>You would need a population of {3002645 - this.state.userInput} more to make the list.</p>
             </div>);
     
         for (let j=0; j<cities.length; j++) {
