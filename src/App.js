@@ -11,7 +11,6 @@ class App extends Component {
         userInput: "Enter Your City's Population",
         userRank: "Enter a Population and Click the Button",   
         biggerThan: "...",
-        compare: "bigger than "
     }
     
 
@@ -73,7 +72,7 @@ class App extends Component {
                 <button onClick={this.rankIt}>RANK MY CITY</button>
                 <p>Your City's Population: {this.state.userInput}</p>
                 <p>Your City's Rank: {this.state.userRank}</p>
-                <p>Your City is {this.state.compare}{this.state.biggerThan}</p>
+                <p>Your City is {this.state.biggerThan}</p>
                 <Table characterData = {cities} />
             </div>
             
