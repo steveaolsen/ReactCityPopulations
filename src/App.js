@@ -49,7 +49,7 @@ class App extends Component {
 
             if (this.state.userInput < cities[cities.length - 1].Population) {
             this.setState( {biggerThan: notBigger } );
-            } else if (this.state.userInput === cities[cities.length - 1].Population) {
+            } else if (this.state.userInput === cities[ranker - 1].Population) {
                 this.setState( {biggerThan: "Your City is Either " + cities[ranker -1].CityName + " or Has an Equal Population to It." } );
             } else {
             this.setState( {biggerThan: "Bigger Than " + cities[ranker -1].CityName + " By a Population of " + (this.state.userInput - cities[ranker -1].Population) } );
