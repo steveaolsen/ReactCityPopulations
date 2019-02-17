@@ -86,7 +86,7 @@ const cities = [
         CityRank : 10,
         CityName : "Moscow",
         Country : "Russia",
-        Population : 13200000,
+        Population : 12300000,
         CityType : "Federal City",
         CityKM : 2511,
         DensityKM : 5256
@@ -139,7 +139,7 @@ const cities = [
     {
         CityRank : 16,
         CityName : "Jakarta",
-        Country : "indonesia",
+        Country : "Indonesia",
         Population : 10624000,
         CityType : "Special Capital Region",
         CityKM : 662,
